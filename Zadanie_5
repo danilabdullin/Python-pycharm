@@ -1,0 +1,17 @@
+revenue = int(input("Введите выручку вашей компании: "))
+costs = int(input("Введите издержки вашей компании: "))
+if costs >= revenue:
+    if costs == revenue:
+        print("Ну хотя бы не минус)")
+    else:
+        profit = int(revenue) - int(costs)
+        print("К сожалению, ваш убыток составил: ", profit)
+elif revenue > 0:
+    profit = revenue - costs
+    print("Молодец! Твоя прибыль составила: ", profit)
+    q_emp = int(input("Введите количсетво ваших сотрудников: "))
+    profitability = f"{profit / revenue:.2f}"
+    pr_per_emp = f"{profit / q_emp:.2f}"
+    print("Ваша рентабельность: ", profitability, "А прибыль в расчете на одного сотрудника: ", pr_per_emp)
+else:
+    print("по сути у меня почему-то лишний элемент(")
