@@ -1,0 +1,12 @@
+month = input("please enter the month number: ")
+summer = (6, 7, 8)
+autumn = (9, 10, 11)
+dict_1 = {"12": "winter", "1": "winter", "2": "winter", "3": "spring", "4": "spring", "5": "spring"}
+month = int(month)
+if month in summer:
+    print("This is summer")
+elif month in autumn:
+    print("This is autumn")
+else:
+    month = str(month)
+    print(dict_1[month])
