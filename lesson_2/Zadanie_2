@@ -1,0 +1,11 @@
+a = list(input("Enter something (word or number): "))
+if len(a) % 2 == 0:
+    a[::2], a[1::2] = a[1::2], a[::2]
+    print(' '.join([str(i) for i in a]))
+else:
+    copy_a = a.copy()
+    del a[-1]
+    a[::2], a[1::2] = a[1::2], a[::2]
+    a = list(''.join([str(i) for i in a]))
+    a.append(copy_a[-1])
+    print(a)

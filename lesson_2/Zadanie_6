@@ -1,0 +1,10 @@
+q_goods = int(input("How many goods do you want to write down? "))
+i = 1
+f_list = []
+while i <= q_goods:
+    f_dict = dict({'Name': input("Enter the name: "), 'Price': input("Enter the price: "),
+                   'quantity': input('Enter the quantity: '), 'Unit': input("Enter the unit: ")})
+    f_list.append((i, f_dict))
+    i += 1
+print(f_list)
+print(f"name {f_dict.get('Name')}")
