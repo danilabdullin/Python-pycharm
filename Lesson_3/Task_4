@@ -1,0 +1,22 @@
+def my_func(x, y):
+    result = x ** y
+    print(result)
+
+
+my_func(5, -2)
+
+
+# возведение в степень через цикл:
+def my_func_2(x, y):
+    """Степень должна быть отрицательной"""
+    y = abs(y)
+    r = 1
+    result = ()
+    while y > 0:
+        r *= x
+        y -= 1
+        result = 1 / r
+    print('result:', result)
+
+
+my_func_2(5, -2)

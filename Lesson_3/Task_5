@@ -1,0 +1,23 @@
+def sum_func(*args):
+    f_var = 0
+    while True:
+        numbers = input("Enter numbers with white spce or 'Q' to stop: ")
+        if numbers.upper() == "Q":
+            break
+        elif numbers[-1].upper() == "Q":
+            numbers = numbers.split()
+            numbers.remove("q" or 'Q')
+            numbers = [int(el) for el in numbers]
+            summa = sum(numbers)
+            f_var = summa + f_var
+            print(f_var)
+            break
+        else:
+            numbers = numbers.split()
+            numbers = [int(el) for el in numbers]
+            summa = sum(numbers)
+            f_var = summa + f_var
+            print(f_var)
+
+
+sum_func()

@@ -1,0 +1,14 @@
+#не был уверен нужно ли запрашивать данные или сразу вписывать как у меня в примере, поэтому
+# на всякий случай добавил запрос данных.
+
+def user_info(name, surname, birthday, city, email):
+    """This function receives information and returns it back"""
+    # name = input("What is your name? ")
+    # surname = input("What is your surname? ")
+    # birthday = input("When you was born? ")
+    # city = input("where do you live? ")
+    # email = input("What is your email? ")
+    print(f"Your name is {name} {surname}, you was born on {birthday}, you are living in {city} and your e-mail address is {email}")
+
+user_info(surname="Abd", city="Moscow", email="danilabd@mail.ru", birthday="10 January", name="Danil")
+#user_info()
