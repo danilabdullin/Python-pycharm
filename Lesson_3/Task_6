@@ -1,9 +1,21 @@
-# не понял как реалтзовать это задание через ord(), но за то эта функция работает
-def int_fun():
-    word = str(input("Enter word: "))
-    word = str(word)
-    word = word.title()
-    print(word)
+def int_func(word):
+    result = []
+    word = list(word)
+    for el in word:
+        if ord(el) < 97 or ord(el) > 127:
+            print("Word must consist of letter in lower case in English!")
+            break
+        else:
+            result.append(el)
+    if len(result) == len(word):
+        result = "".join(result)
+        print(result.title())
 
 
-int_fun()
+int_func("text")
+
+# вторая часть задания: Почему-то в конце еще появляется лист [None], не могу понять почему
+words = input("Enter words in lowercase with whitespace: ")
+words = words.split()
+list_1 = list(map(int_func, words))
+print(list_1)
