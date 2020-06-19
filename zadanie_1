@@ -1,6 +1,0 @@
-a = 21
-b = "Some text"
-print(a, b)
-a = int(input("сколько вам лет?"))
-b = input("как вас зовут?:")
-print(f"Тебя зовут {b} и тебе {a}.")
