@@ -1,8 +1,0 @@
-a = 2
-b = 3
-i = 0
-b = ("%.2f" % b)
-while a < b:
-    a = float(f'{a + a * 0.1:.2f}')
-    i = i + 1
-print(i)
