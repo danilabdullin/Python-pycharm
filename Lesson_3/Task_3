@@ -1,0 +1,14 @@
+#Здесь тоже вопрос: в задании написано, что нужно реализвать функцию my_func()
+# Но если у нас в скобках не заданы параметры, то получается в данной функции я запрашиваю не позиционные параметры?
+def my_func():
+    """This function prints the sum of two biggest digits"""
+    num_1 = int(input("Enter first number "))
+    num_2 = int(input("enter second number "))
+    num_3 = int(input("enter third number "))
+    numbers = [num_1, num_2, num_3]
+    number_1 = max(numbers)
+    numbers.remove(number_1)
+    number_2 = numbers[0] if numbers[0] > numbers[1] else numbers[1]
+    sum_1 = number_1 + number_2
+    print(sum_1)
+my_func()

@@ -1,0 +1,23 @@
+#первая функция запрашивает данные у пользователя, но тогда у нее получаются не позиционные аргументы, поэтому видимо второй вариант правильный
+# def division_process():
+#     """Prints the result of division"""
+#     try:
+#         dividend = int(input("Please enter the dividend: "))
+#         division = int(input("Please enter the division: "))
+#         result = dividend / division
+#     except ZeroDivisionError:
+#         print("Division can not be equal to 0")
+#     else:
+#         print(result)
+#
+# division_process()
+
+
+def division_process_2(dividend, division):
+    try:
+        result = dividend / division
+    except ZeroDivisionError:
+        print("Division can not be equal to 0")
+    else:
+        print(result)
+division_process_2(2, 1)

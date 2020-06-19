@@ -1,0 +1,9 @@
+# не понял как реалтзовать это задание через ord(), но за то эта функция работает
+def int_fun():
+    word = str(input("Enter word: "))
+    word = str(word)
+    word = word.title()
+    print(word)
+
+
+int_fun()
