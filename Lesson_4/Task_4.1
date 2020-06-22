@@ -1,0 +1,10 @@
+from sys import argv
+
+name, per_hours, hours, bonus = argv
+try:
+    per_hours, hours, bonus = int(per_hours), int(hours), int(bonus)
+    salary = per_hours * hours
+    f_salary = salary + bonus
+    print(f"Your salary is: {f_salary}")
+except ValueError:
+    print("Some problem with inputs")

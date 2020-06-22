@@ -1,0 +1,20 @@
+from itertools import count
+from math import factorial
+
+
+def fact():
+    for el in count(1):
+        yield factorial(el)
+
+
+def my_factoriale(i):
+    c = 0
+    for el in fact():
+        if c < i:
+            print(el)
+            c += 1
+        else:
+            break
+
+
+my_factoriale(5)

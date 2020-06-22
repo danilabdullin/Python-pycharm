@@ -1,0 +1,24 @@
+from itertools import count, cycle
+
+
+def count_func(start, stop):
+    for el in count(start):
+        if el > stop:
+            break
+        else:
+            print(el)
+
+
+count_func(1, 10)
+
+
+def cycle_func(f_list, i):
+    с = 0
+    for el in cycle(f_list):
+        if с >= i * len(f_list):
+            break
+        print(el)
+        с += 1
+
+
+cycle_func([1, 2, True], 3)
