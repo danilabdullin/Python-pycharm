@@ -1,0 +1,10 @@
+with open('salaries.txt', 'r', encoding='UTF-8') as f:
+    salary = []
+    workers = []
+    new_list = f.read().split('\n')
+    for i in new_list:
+        i = i.split()
+        if float(i[1]) < 20000:
+            workers.append(i[0])
+        salary.append(i[1])
+print(f"Workers who's salary is less then 20000: {workers}, average salary for all workers: {sum(map(float, salary)) / len(salary)}")

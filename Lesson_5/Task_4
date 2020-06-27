@@ -1,0 +1,7 @@
+rus = {'One': 'Один', 'Two': 'Два', 'Three': 'Три', 'Four': 'Четыре'}
+translation = []
+with open('text_4.txt', 'r') as f:
+    for i in f:
+        i = i.split(' ', 1)
+        translation.append(rus[i[0]] + '  ' + i[1])
+    print(translation)

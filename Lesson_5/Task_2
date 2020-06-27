@@ -1,0 +1,16 @@
+n = 0
+letter = 0
+with open("second.txt", "r") as f:
+    for line in f:
+        n += 1
+        words = 0
+        pos = "out"
+        for letter in line:
+            if letter != ' ' and pos == 'out':
+                words += 1
+                pos = 'in'
+            elif letter == ' ':
+                pos = 'out'
+        print(f'Number of words in line {n} is {words}')
+
+print(f"Number of lines is {n}")

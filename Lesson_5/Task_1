@@ -1,0 +1,11 @@
+with open("first.txt", "w") as f:
+    line = input("Enter your text: ")
+    while line:
+        f.write(line + "\n")
+        line = input("Enter your text or press 'Enter' to stop: ")
+        if not line:
+            break
+
+with open("first.txt", "r") as f:
+    content = f.readlines()
+    print(f"Your lines are: {content}")

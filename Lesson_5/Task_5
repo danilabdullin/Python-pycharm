@@ -1,0 +1,5 @@
+with open('file_5.txt', 'w+') as f:
+    line = input('Enter numbers with whitespcae \n')
+    f.writelines(line)
+    numbers = line.split()
+    print(sum(map(int, numbers)))
