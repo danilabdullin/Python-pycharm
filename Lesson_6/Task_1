@@ -1,0 +1,22 @@
+from time import sleep
+
+
+class TrafficLight:
+    __color = ['Red', 'Yellow', 'Green']
+
+    def running(self):
+        i = 0
+        while i < 2:  # ограничитель, чтобы не было бесконечно
+            print(f'Traffic Light color: {TrafficLight.__color[0]}')
+            sleep(7)
+            print(f'Traffic Light color: {TrafficLight.__color[1]}')
+            sleep(2)
+            print(f'Traffic Light color: {TrafficLight.__color[2]}')
+            sleep(7)
+            print(f'Traffic Light color: {TrafficLight.__color[1]}')
+            sleep(2)
+            i += 1
+
+
+TrafficLight = TrafficLight()
+TrafficLight.running()

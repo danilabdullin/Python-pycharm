@@ -1,0 +1,81 @@
+import random
+
+
+class Car:
+
+    def __init__(self, speed, color, name, is_police):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
+
+    def go(self):
+        print(f'{self.name} goes!')
+
+    def stop(self):
+        print(f'{self.name} stopped!')
+
+    def turn(self):
+        i = random.randint(0, 1)
+        if i == 0:
+            print(f'{self.name} turned right')
+        else:
+            print(f'{self.name} turned left')
+
+    def show_speed(self):
+        print(f"{self.name}'s speed is {self.speed}")
+
+
+class TownCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+    def show_speed(self):
+        print(f"{self.name}'s speed is {self.speed}")
+        if self.speed > 40:
+            print(f'{self.name} exceeds speed limit!')
+        else:
+            pass
+
+
+class SportCar(Car):
+    class SportCar(Car):
+        def __init__(self, speed, color, name, is_police):
+            super().__init__(speed, color, name, is_police)
+
+
+class WorkCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+    def show_speed(self):
+        print(f"{self.name}'s speed is {self.speed}")
+
+        if self.speed > 60:
+            print(f'{self.name} exceeds speed limit!')
+        else:
+            pass
+
+
+class PoliceCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+    def police(self):
+        if self.is_police:
+            print(f'{self.name} is from police')
+        else:
+            print(f'{self.name} is NOT from police')
+
+
+lincoln = TownCar(41, 'White', 'Lincoln Town Car', False)
+ferrari = SportCar(200, 'Red', 'ferrari', False)
+largus = WorkCar(70, 'Silver', 'Lada Largus', False)
+ford = PoliceCar(200, 'Blue', 'Ford Focus', True)
+
+ferrari.show_speed()
+ford.police()
+ford.show_speed()
+largus.turn()
+largus.show_speed()
+print(lincoln.color)
