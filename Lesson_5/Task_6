@@ -1,0 +1,8 @@
+subjects = {}
+with open('text_6.txt', encoding="utf-8") as f:
+    for line in f:
+        subject, hours = line.split(":")
+        subject_sum = sum(map(int, "".join([i for i in hours if i == ' ' or (i >= '0' and i <= '9')]).split()))
+        subjects[subject] = subject_sum
+
+print(subjects)

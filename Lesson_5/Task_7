@@ -1,0 +1,20 @@
+import json
+
+with open('text_7new.json', 'w', encoding='utf-8') as JasonFile:
+    with open('text_7.txt', encoding='utf-8') as file:
+        subjects = {}
+        middle = {}
+        k, o = 0, 0
+        line = file.read().split("\n")
+        for i in line:
+            i = i.split()
+            profit = int(i[2]) - int(i[3])
+            subjects[i[0]] = profit
+            if profit > 0:
+                k += profit
+                o += 1
+            middle["average_profit"] = k/o
+        full_list = [subjects, middle]
+        json.dump(full_list, JasonFile, ensure_ascii=False, indent=4)
+
+print(f"All information on firms:\n{line}\n\nTotal list:\n{full_list}")
