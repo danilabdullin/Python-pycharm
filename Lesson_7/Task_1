@@ -1,0 +1,24 @@
+class MatrixThree:
+
+    def __init__(self, list_1):
+        self.list_1 = list_1
+
+    def __add__(self, other):
+        matr = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+        try:
+            for i in range(len(self.list_1)):
+                for j in range(len(other.list_1[i])):
+                    matr[i][j] = self.list_1[i][j] + other.list_1[i][j]
+
+            return str('\n'.join(['\t'.join([str(j) for j in i]) for i in matr]))
+        except ValueError:
+            print("Матрицы должны быть квадратными 3-го порядка")
+
+    def __str__(self):
+        return str('\n'.join(['\t'.join([str(j) for j in i]) for i in self.list_1]))
+
+
+matrix_1 = MatrixThree([[1, 2, 3], [1, 2, 3], [1, 2, 3]])
+matrix_2 = MatrixThree([[1, 2, 3], [1, 2, 3], [1, 2, 3]])
+print(matrix_1 + matrix_2)

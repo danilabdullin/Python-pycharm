@@ -1,0 +1,51 @@
+class Cloth:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def amount_c(self):
+        return f'Amount of material for coat: {self.width / 6.5 + 0.5}'
+
+    def amount_j(self):
+        return f' Amount of material for jacket: {self.height * 2 + 0.3}'
+
+    @property
+    def full_amount(self):
+        return str(f'Full amount of material: {(self.width / 6.5 + 0.5) + (self.height * 2 + 0.3)}')
+
+    @property
+    def height(self):
+        return self.__height
+
+    @height.setter
+    def height(self, height):
+        if height < 150:
+            self.__height = 150
+        elif height > 200:
+            self.height = 200
+        else:
+            self.__height = height
+
+
+class Coat(Cloth):
+    def __init__(self, width, height):
+        super().__init__(width, height)
+        self.amount_c = round(self.width / 6.5 + 0.5)
+
+    def __str__(self):
+        return f'Amount of material for coat: {self.amount_c}'
+
+
+class Jacket(Cloth):
+    def __init__(self, width, height):
+        super().__init__(width, height)
+        self.amount_j = round(self.height * 2 + 0.3)
+
+    def __str__(self):
+        return f'Amount of material for jacket: {self.amount_j}'
+
+coat = Coat(3, 10)
+jacket = Jacket(2, 5)
+print(jacket)
+print(coat.full_amount)
+print(jacket.amount_c())
