@@ -1,0 +1,22 @@
+class Exception:
+    def __init__(self, *args):
+        self.f_list = []
+
+    def add_list(self):
+
+        while True:
+            try:
+                val = [int(i) for i in input('Enter numbers using whitespace ').split()]
+                self.f_list.append(val)
+                print(f'your list - {self.f_list} \n ')
+            except:
+                print(f"Not a number!")
+                y_or_n = input(f'Try again? type Y or N ')
+
+                if y_or_n == 'Y' or y_or_n == 'y':
+                    print(a.add_list())
+                else:
+                    return f'Script stopped'
+
+a = Exception()
+print(a.add_list())

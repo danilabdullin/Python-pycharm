@@ -1,0 +1,17 @@
+class ZeroDivision:
+    def __init__(self, dividend, divisor):
+        self.dividend = dividend
+        self.divisor = divisor
+
+    @staticmethod
+    def divide(dividend, divisor):
+        try:
+            return (dividend / divisor)
+        except:
+            return (f"Say NO to 'Zero'!")
+
+
+div = ZeroDivision(3, 7)
+print(ZeroDivision.divide(2, 5))
+print(ZeroDivision.divide(1000, 0))
+print(div.divide(12, 0.12))
